@@ -122,12 +122,12 @@ penguin.gg <- penguin.df %>%
 #Displaying ggplot
 penguin.gg +
   #Labeling ggplot
-  labs(x = "Bill Length (mm)", y = "Flipper Length (mm)", title = "Penguin Bill Length vs Flipper Length by Species") +
+  labs(x = "Bill Length (mm)", y = "Flipper Length (mm)", title = "Penguin Bill Length vs Flipper Length by Sex") +
   #Adding legend title
   scale_colour_viridis_d("Species") +
-  #Splitting by species
-  facet_grid(vars(species))
+  #Splitting by sex
+  facet_grid(vars(sex))
 ```
 
 ### Data Trends
-From looking at the above plots, it can be seen that average bill length is shorter in the Adelie penguins than in the other two species observed.  Additionally, average flipper length appears higher in the observed Gentoo penguins than the other two species observed.  In all three species there appears to be a positive correlation between flipper length and bill length.
+From looking at the above plots, it can be seen that average bill length is shorter in the Adelie penguins than in the other two species observed.  Additionally, average flipper length appears higher in the observed Gentoo penguins than the other two species observed.  In all three species there appears to be a positive correlation between flipper length and bill length.  These trends appear to be preserved between the sexes, with all 3 species showing higher apparent average bill length in males.
